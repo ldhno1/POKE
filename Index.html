@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>스타팅 포켓몬을 정하자!</title>
+    <style>
+        body {
+            text-align: center;
+            font-size: 2rem;
+            margin-top: 20%;
+        }
+    </style>
+</head>
+<body>
+    <p id="message">🌐오박사가 대답하길..🌐</p>
+    <button onclick="showRandomMessage()">눌러서 확인하기</button>
+
+    <script>
+        function showRandomMessage() {
+            const messages = [
+                "축하해 너의 스타팅 포켓몬은 꼬부기야!",
+                "축하해 너의 스타팅 포켓몬은 파이리야!",
+                "축하해 너의 스타팅 포켓몬은 이상해씨야!",
+                "축하해 너의 스타팅 포켓몬은 피카츄야!",
+                "이런 스타팅 포켓몬이 없군 나중에 다시오렴¡"
+            ];
+            document.getElementById("message").innerText = messages[Math.floor(Math.random() * messages.length)];
+        }
+    </script>
+</body>
+</html>
